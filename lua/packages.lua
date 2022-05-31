@@ -54,6 +54,7 @@ require('packer').startup(function()
   use 'tpope/vim-rails'
   use 'thoughtbot/vim-rspec'
   use 'fatih/vim-go'
+  use 'hashivim/vim-terraform'
 
   use 'preservim/nerdtree'
   use 'ryanoasis/vim-devicons'

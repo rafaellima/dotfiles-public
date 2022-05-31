@@ -35,3 +35,4 @@ keymap('n', '<leader>t', "<cmd>:call RunCurrentSpecFile()<CR>", opts)
 keymap('n', '<leader>s', "<cmd>:call RunNearestSpec()<CR>", opts)
 keymap('n', '<leader>l', "<cmd>:call RunLastSpec()<CR>", opts)
 keymap('n', '<leader>a', "<cmd>:call RunAllSpecs()<CR>", opts)
+
