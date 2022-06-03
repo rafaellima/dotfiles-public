@@ -11,5 +11,5 @@ vim.cmd[[autocmd FileType ruby setlocal shiftwidth=2 tabstop=2]]
 vim.cmd[[autocmd FileType javascript setlocal shiftwidth=2 tabstop=2]]
 
 -- matching braces
-vim.cmd[[inoremap do<CR> do<CR>end<Esc>ko]]
+--vim.cmd[[inoremap do<CR> do<CR>end<Esc>ko]]
 

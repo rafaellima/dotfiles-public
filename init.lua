@@ -1,7 +1,7 @@
 require "user.keymaps"
 require "user.options"
+require('user.plugins')
 
-require('packages')
 require('config')
 
 require "user.cmp"
