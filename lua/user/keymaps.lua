@@ -1,13 +1,23 @@
--- General navigation
-local keymap = vim.api.nvim_set_keymap
-keymap('n', '<c-s>', ':w<CR>', {})
-keymap('i', '<c-s>', '<Esc>:w<CR>a', {})
+local opts = { noremap = true, silent = true }
 
-local opts = { noremap = true }
-keymap('n', '<c-j>', '<c-w>j', opts)
-keymap('n', '<c-h>', '<c-w>h', opts)
-keymap('n', '<c-k>', '<c-w>k', opts)
-keymap('n', '<c-l>', '<c-w>l', opts)
+-- Shorten function call
+local keymap = vim.api.nvim_set_keymap
+
+-- Normal --
+-- Better window navigation
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts) -- not working, needs remapping
+
+-- Navigate buffers
+keymap("n", "<S-l>", ":bnext<CR>", opts)
+keymap("n", "<S-h>", ":bprevious<CR>", opts)
+
+-- Visual --
+-- Stay in indent mode
+keymap("v", "<", "<gv", opts)
+keymap("v", ">", ">gv", opts)
 
 -- LSP keymaps
 local function nkeymap(key, map)
