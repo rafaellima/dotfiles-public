@@ -7,8 +7,14 @@ local keymap = vim.api.nvim_set_keymap
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-k>", "<C-w>k", opts) -- not working, needs remapping
 keymap("n", "<C-l>", "<C-w>l", opts) -- not working, needs remapping
+
+-- Resize with arrows
+keymap("n", "<S-Up>", ":resize -2<CR>", opts)
+keymap("n", "<S-Down>", ":resize +2<CR>", opts)
+keymap("n", "<S-Left>", ":vertical resize -2<CR>", opts)
+keymap("n", "<S-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
@@ -18,6 +24,9 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
+
+--Fix VIM Yank
+keymap("v", "p", '"_dP', opts)
 
 -- LSP keymaps
 local function nkeymap(key, map)
