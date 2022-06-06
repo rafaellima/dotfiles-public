@@ -4,6 +4,7 @@ require('user.plugins')
 
 require('config')
 
+require "user.autopairs"
 require "user.comment"
 require "user.cmp"
 require "user.indentline"

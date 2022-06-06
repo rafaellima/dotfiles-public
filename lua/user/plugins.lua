@@ -50,6 +50,7 @@ require('packer').startup(function()
   }
   use "lukas-reineke/indent-blankline.nvim"
   use "numToStr/Comment.nvim"
+  use "windwp/nvim-autopairs"
 
   use 'wakatime/vim-wakatime'
 
