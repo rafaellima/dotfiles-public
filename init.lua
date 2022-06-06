@@ -4,6 +4,7 @@ require('user.plugins')
 
 require('config')
 
+require "user.comment"
 require "user.cmp"
 require "user.indentline"
 require "user.lsp"
