@@ -1,11 +1,3 @@
--- window-local options
-vim.wo.number = true
-
--- buffer-local options
-vim.bo.expandtab = true
-vim.bo.shiftwidth = 2
-vim.bo.softtabstop = 2
-
 -- global options
 vim.api.nvim_set_option("shell", "fish")
 
@@ -18,9 +10,6 @@ vim.cmd[[autocmd FileType yaml setlocal shiftwidth=2 tabstop=2]]
 vim.cmd[[autocmd FileType ruby setlocal shiftwidth=2 tabstop=2]]
 vim.cmd[[autocmd FileType javascript setlocal shiftwidth=2 tabstop=2]]
 
-vim.cmd[[set tabstop=2]]
-vim.cmd[[set shiftwidth=2]]
-
 -- matching braces
-vim.cmd[[inoremap do<CR> do<CR>end<Esc>ko]]
+--vim.cmd[[inoremap do<CR> do<CR>end<Esc>ko]]
 
