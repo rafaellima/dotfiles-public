@@ -1,7 +1,11 @@
 require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
-  use 'nvim-treesitter/nvim-treesitter'
+  use {
+    'nvim-treesitter/nvim-treesitter'
+  }
+
+  -- LSP
   use {
     "williamboman/nvim-lsp-installer",
     {
@@ -31,6 +35,8 @@ require('packer').startup(function()
       end
     }
   }
+
+  -- cmp plugins
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
@@ -48,6 +54,9 @@ require('packer').startup(function()
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
+  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+  use { 'moll/vim-bbye'}
+
   use "lukas-reineke/indent-blankline.nvim"
   use "numToStr/Comment.nvim"
   use "windwp/nvim-autopairs"
@@ -59,6 +68,8 @@ require('packer').startup(function()
   use 'fatih/vim-go'
   use 'hashivim/vim-terraform'
 
-  use 'preservim/nerdtree'
+  use {
+    'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'
+  }
   use 'ryanoasis/vim-devicons'
 end)

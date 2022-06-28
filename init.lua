@@ -1,6 +1,7 @@
 require "user.keymaps"
 require "user.options"
 require('user.plugins')
+-- require "user.colorscheme"
 
 require('config')
 
@@ -12,3 +13,5 @@ require "user.lsp"
 require "user.lualine"
 require "user.treesitter"
 require "user.telescope"
+require "user.bufferline"
+require "user.nvim-tree"
