@@ -57,3 +57,7 @@ keymap('n', '<leader>a', "<cmd>:call RunAllSpecs()<CR>", opts)
 
 -- Bdelete
 nkeymap("q", "<cmd>:Bdelete<CR>", opts) -- deletes current buffer from memory
+
+-- NvimTree
+nkeymap("to", "<cmd>:NvimTreeOpen<CR>", opts)
+nkeymap("tc", "<cmd>:NvimTreeClose<CR>", opts)
