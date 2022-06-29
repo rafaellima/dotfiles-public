@@ -79,10 +79,18 @@ require('packer').startup(function()
 
   use 'wakatime/vim-wakatime'
 
+  -- Ruby/Rails/Rspec
   use 'tpope/vim-rails'
   use 'thoughtbot/vim-rspec'
+
+  -- Golang
   use 'fatih/vim-go'
+
+  -- Terraform
   use 'hashivim/vim-terraform'
+
+  -- Git
+  use 'lewis6991/gitsigns.nvim'
 
   use {
     'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'
