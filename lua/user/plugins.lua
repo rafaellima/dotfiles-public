@@ -57,6 +57,22 @@ require('packer').startup(function()
   use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
   use { 'moll/vim-bbye'}
 
+  -- use { 'github/copilot.vim'}
+  use {
+    "zbirenbaum/copilot.lua",
+    event = { "VimEnter" },
+    config = function()
+      vim.defer_fn(function()
+        require "user.copilot"
+      end, 100)
+    end,
+  }
+  use {
+    "zbirenbaum/copilot-cmp",
+    module = "copilot_cmp",
+  }
+
+
   use "lukas-reineke/indent-blankline.nvim"
   use "numToStr/Comment.nvim"
   use "windwp/nvim-autopairs"
