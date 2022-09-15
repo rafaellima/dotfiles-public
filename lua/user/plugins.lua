@@ -44,19 +44,6 @@ require('packer').startup(function()
   use 'hrsh7th/nvim-cmp'
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
-
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
-
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
-  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
-  use { 'moll/vim-bbye'}
-
   -- use { 'github/copilot.vim'}
   use {
     "zbirenbaum/copilot.lua",
@@ -72,8 +59,17 @@ require('packer').startup(function()
     module = "copilot_cmp",
   }
 
+  -- Navigation
+  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+  use { 'moll/vim-bbye'}
+  use {
+    'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'
+  }
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
 
-  use "lukas-reineke/indent-blankline.nvim"
   use "numToStr/Comment.nvim"
   use "windwp/nvim-autopairs"
 
@@ -91,9 +87,12 @@ require('packer').startup(function()
 
   -- Git
   use 'lewis6991/gitsigns.nvim'
-
+  
+  -- Appearance
   use {
-    'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   use 'ryanoasis/vim-devicons'
+  use "lukas-reineke/indent-blankline.nvim"
 end)
