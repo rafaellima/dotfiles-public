@@ -2,7 +2,8 @@
 vim.api.nvim_set_option("shell", "fish")
 
 -- colorscheme
-vim.cmd[[colorscheme NeoSolarized]]
+-- vim.cmd[[colorscheme NeoSolarized]]
+vim.cmd[[colorscheme nordfox]]
 
 -- indentation based on file extension
 vim.cmd[[autocmd FileType go setlocal shiftwidth=4 tabstop=4]]

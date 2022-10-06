@@ -2,7 +2,14 @@ require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   use {
-    'nvim-treesitter/nvim-treesitter'
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
+  use "EdenEast/nightfox.nvim" -- theme
+
+  use {
+    'romgrk/barbar.nvim',
+    requires = {'kyazdani42/nvim-web-devicons'}
   }
 
   -- LSP
@@ -45,22 +52,25 @@ require('packer').startup(function()
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
   -- use { 'github/copilot.vim'}
-  use {
-    "zbirenbaum/copilot.lua",
-    event = { "VimEnter" },
-    config = function()
-      vim.defer_fn(function()
-        require "user.copilot"
-      end, 100)
-    end,
-  }
-  use {
-    "zbirenbaum/copilot-cmp",
-    module = "copilot_cmp",
-  }
+  -- use {
+  --   "zbirenbaum/copilot.lua",
+  --   event = { "VimEnter" },
+  --   config = function()
+  --     vim.defer_fn(function()
+  --       require "user.copilot"
+  --     end, 100)
+  --   end,
+  -- }
+  -- use {
+  --   "zbirenbaum/copilot-cmp",
+  --   module = "copilot_cmp",
+  -- }
 
   -- Navigation
-  use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+  -- use {
+  --   'romgrk/barbar.nvim',
+  --   requires = {'kyazdani42/nvim-web-devicons'}
+  -- }
   use { 'moll/vim-bbye'}
   use {
     'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'

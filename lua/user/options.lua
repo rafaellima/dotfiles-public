@@ -17,6 +17,7 @@ local options = {
   numberwidth = 4,           -- set number column width to 4 {default 2}
 	relativenumber = false,    -- set relative numbered lines
 	wrap = false,              -- display lines as one long line
+  termguicolors = true,
 }
 
 for k, v in pairs(options) do
