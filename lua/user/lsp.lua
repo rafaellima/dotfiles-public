@@ -53,7 +53,7 @@ lsp['gopls'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
 }
-
--- lsp('lspconfig')['terraformls'].setup {
---   capabilities = capabilities
--- }
+lsp['terraform_lsp'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
