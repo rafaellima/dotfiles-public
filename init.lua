@@ -1,17 +1,16 @@
-require "user.keymaps"
-require "user.options"
-require('user.plugins')
-
-require('config')
-
-require "user.autopairs"
-require "user.comment"
-require "user.cmp"
-require "user.indentline"
-require "user.lsp"
-require "user.lualine"
-require "user.treesitter"
-require "user.telescope"
-require "user.barbar"
-require "user.nvim-tree"
-require "user.gitsigns"
+require("rafael.plugins-setup")
+require("rafael.core.options")
+require("rafael.core.keymaps")
+require("rafael.core.colorscheme")
+require("rafael.plugins.comment")
+require("rafael.plugins.nvim-tree")
+require("rafael.plugins.lualine")
+require("rafael.plugins.telescope")
+require("rafael.plugins.nvim-cmp")
+require("rafael.plugins.lsp.mason")
+require("rafael.plugins.lsp.lspconfig")
+require("rafael.plugins.lsp.lspsaga")
+require("rafael.plugins.lsp.null-ls")
+require("rafael.plugins.autopairs")
+require("rafael.plugins.treesitter")
+require("rafael.plugins.gitsigns")
