@@ -58,5 +58,11 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
 
 -- buffer navigation
-keymap.set("n", "<leader>bp", ":bprevious<CR>") -- go to previous buffer
-keymap.set("n", "<leader>bn", ":bnext<CR>") -- go to next buffer
+-- keymap.set("n", "<leader>bp", ":bprevious<CR>") -- go to previous buffer
+-- keymap.set("n", "<leader>bn", ":bnext<CR>") -- go to next buffer
+
+-- harpoon
+keymap.set("n", "<leader>hh", ":lua require('harpoon.ui').toggle_quick_menu()<CR>") -- open up harpoon UI
+keymap.set("n", "<leader>hm", ":lua require('harpoon.mark').add_file()<CR>") -- add current file to harpoon marker 1
+keymap.set("n", "<leader>hn", ":lua require('harpoon.ui').nav_next()<CR>") -- go to next harpoon marker
+keymap.set("n", "<leader>hp", ":lua require('harpoon.ui').nav_prev()<CR>") -- go to previous harpoon marker
