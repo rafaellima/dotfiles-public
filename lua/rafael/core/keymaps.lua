@@ -40,6 +40,7 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window max
 
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
+keymap.set("n", "<leader>tc", ":NvimTreeCollapse<CR>") -- collapse file explorer
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
@@ -57,12 +58,23 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
 
--- buffer navigation
 -- keymap.set("n", "<leader>bp", ":bprevious<CR>") -- go to previous buffer
 -- keymap.set("n", "<leader>bn", ":bnext<CR>") -- go to next buffer
 
 -- harpoon
 keymap.set("n", "<leader>hh", ":lua require('harpoon.ui').toggle_quick_menu()<CR>") -- open up harpoon UI
 keymap.set("n", "<leader>hm", ":lua require('harpoon.mark').add_file()<CR>") -- add current file to harpoon marker 1
+keymap.set("n", "<leader>hr", ":lua require('harpoon.mark').rm_file()<CR>") -- remove current file to harpoon marker 1
+keymap.set("n", "<leader>hc", ":lua require('harpoon.mark').clear_all()<CR>") -- clear all harpoon markers
 keymap.set("n", "<leader>hn", ":lua require('harpoon.ui').nav_next()<CR>") -- go to next harpoon marker
 keymap.set("n", "<leader>hp", ":lua require('harpoon.ui').nav_prev()<CR>") -- go to previous harpoon marker
+
+-- vim-rspec
+keymap.set("n", "<leader>tt", "<cmd>RunCurrentSpecFile()<CR>") -- run rspec tests for current file
+keymap.set("n", "<leader>ts", "<cmd>RunNearestSpec()<CR>") -- run nearest rspec test
+
+-- bash scripts chmod +x
+keymap.set("n", "<leader>x", ":!chmod +x %<CR>") -- make current file executable
+
+-- tmux session management
+keymap.set("n", "<c-f>", ":!tmux neww /Users/rafael/tmux-sessionizer<CR>", { silent = true })
