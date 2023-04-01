@@ -78,3 +78,7 @@ keymap.set("n", "<leader>x", ":!chmod +x %<CR>") -- make current file executable
 
 -- tmux session management
 keymap.set("n", "<c-f>", ":!tmux neww /Users/rafael/tmux-sessionizer<CR>", { silent = true })
+
+-- undo-tree
+keymap.set("n", "<leader>uu", ":UndotreeToggle<CR>")
+keymap.set("n", "<leader>uf", ":UndotreeFocus<CR>")

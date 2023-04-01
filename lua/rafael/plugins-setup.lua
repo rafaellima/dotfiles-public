@@ -103,6 +103,9 @@ return packer.startup(function(use)
 		end,
 	})
 
+	-- undo tree
+	use("mbbill/undotree")
+
 	-- auto closing
 	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
