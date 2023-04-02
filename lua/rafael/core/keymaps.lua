@@ -7,8 +7,11 @@ local keymap = vim.keymap -- for conciseness
 -- General Keymaps
 ---------------------
 
--- use jk to exit insert mode
-keymap.set("i", "jk", "<ESC>")
+keymap.set("n", "<leader>pv", vim.cmd.Ex)
+
+-- use capitals J K to move lines up and down
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
@@ -82,3 +85,6 @@ keymap.set("n", "<c-f>", ":!tmux neww /Users/rafael/tmux-sessionizer<CR>", { sil
 -- undo-tree
 keymap.set("n", "<leader>uu", ":UndotreeToggle<CR>")
 keymap.set("n", "<leader>uf", ":UndotreeFocus<CR>")
+
+-- git fugitive
+keymap.set("n", "<leader>ms", ":G<CR>") -- git status
